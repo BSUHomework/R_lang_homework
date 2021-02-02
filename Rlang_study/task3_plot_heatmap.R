@@ -1,10 +1,10 @@
-library(heatmaply)
 library(ggplot2)
 library(RColorBrewer)
 library(grid)
 #install.packages("cowplot")
-
-data1 = read.csv("./task3_heatmap_data_1.csv")
+download.file("https://github.com/BSUHomework/R_lang_homework/blob/main/Rlang_study/task3_heatmap_data_1.csv",destfile = "./task3_heatmap_data_1.csv")
+download.file("https://github.com/BSUHomework/R_lang_homework/blob/main/Rlang_study/task3_heatmap_data2.csv",destfile = "./task3_heatmap_data2.csv")
+data1 = read.csv("https://raw.githubusercontent.com/BSUHomework/R_lang_homework/main/Rlang_study/task3_heatmap_data_1.csv")
 
 library(pheatmap)
 heat1 = pheatmap(data1,scale="none",
@@ -18,8 +18,8 @@ heat1 = pheatmap(data1,scale="none",
                  main="\n\n\n",
                  labels_row="data")
 
-data2 = read.csv("./task3_heatmap_data2.csv")
-par(adj = 0)
+data2 = read.csv("https://raw.githubusercontent.com/BSUHomework/R_lang_homework/main/Rlang_study/task3_heatmap_data2.csv")
+
 heat2 = pheatmap(data2,scale="none",
                  cluster_rows=F,
                  cluster_cols=F,

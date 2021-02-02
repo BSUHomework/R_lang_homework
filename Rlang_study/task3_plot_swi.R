@@ -6,7 +6,7 @@ library(hrbrthemes)
 library(anytime)
 library(scales)
 # Load dataset from github
-data <- read.csv("./data-QWWky_format.csv", header=T)
+data <- read.csv("https://raw.githubusercontent.com/BSUHomework/R_lang_homework/main/Rlang_study/data-QWWky_format.csv", header=T)
 data$Jahr2=paste(data$Jahr, "-01-01", sep="")
 data$date <- as.Date(data$Jahr2,'%Y')
 # Usual area chart
